@@ -1,2 +1,2 @@
-# cloudresume
-My implementation of Cloud resume challenge
+# Azure resume
+My implementation of Cloud resume challenge, in Azure.
