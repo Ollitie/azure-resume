@@ -1,11 +1,11 @@
-window.addEventListener('DOMContentLoaded', (event) =>{
+window.addEventListener('DOMContentLoaded', (event) => {
     getVisitCount();
 })
 
-const functionAPI = '';
+const functionAPI = "http://localhost:7071/api/GetResumeCounter";
 
 const getVisitCount = () => {
-    let count 10;
+    let count = 10;
     fetch(functionAPI).then(response => {
         return response.json()
     }).then(response => {
