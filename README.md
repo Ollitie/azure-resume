@@ -14,6 +14,7 @@ Backend:
 - Azure Functions binded to CosmosDB, to get and update the visitor counter data. Code in C#, originally by madebygps. I made some changes to the code as I'm trying to provision Azure resources with Bicep -> now Functions code adds a count item to the database container after it is provisioned.
 - Static website hosting in a blob storage.
 - Azure CDN to enable custom domain and https
+- Azure DNS to host my custom domain in Azure and to add CNAME records.
 
 CI/CD with GitHub Actions:
 - Frontend workflow: Changes in website code and they are pushed to GitHub repository -> GitHub Actions updates the website files in Azure blob storage
