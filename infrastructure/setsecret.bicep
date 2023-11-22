@@ -1,3 +1,5 @@
+// This is used to store secrets to key vault
+
 param keyVaultName string
 param secretName string
 @secure()

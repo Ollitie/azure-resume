@@ -1,3 +1,5 @@
+// This creates a managed identity, a role for it and role assignment. Managed identity is used to access key vault secrets
+
 param managedIdentityName string
 param location string
 
@@ -7,17 +9,16 @@ resource managedSystemIdentity 'Microsoft.ManagedIdentity/userAssignedIdentities
 }
 
 resource keyVaultSecretsReaderRoleDefinition 'Microsoft.Authorization/roleDefinitions@2022-04-01' existing = {
-  scope: subscription()
   name: '4633458b-17de-408a-b874-0445c86b69e6'
 }
 
-// uses the roleid defined in main.bicep and maps it to managed identity created previously.
-resource roleassignment_operator 'Microsoft.Authorization/roleAssignments@2022-04-01' = {
-  name: guid(keyVaultSecretsReaderRoleDefinition.id, resourceGroup().id)
+resource MSIroleAssignment 'Microsoft.Authorization/roleAssignments@2022-04-01' = {
+  name: guid(keyVaultSecretsReaderRoleDefinition.id, managedSystemIdentity.id, resourceGroup().id)
+  scope: resourceGroup()
   properties: {
-    principalType: 'ServicePrincipal'
     roleDefinitionId: keyVaultSecretsReaderRoleDefinition.id 
     principalId: managedSystemIdentity.properties.principalId
+    principalType: 'ServicePrincipal'
   }
 }
 
