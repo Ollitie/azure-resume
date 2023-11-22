@@ -19,7 +19,6 @@ env:
 jobs:
   build-and-deploy:
     runs-on: windows-latest
-    environment: production
     steps:
     - name: 'Checkout GitHub Action'
       uses: actions/checkout@v3
