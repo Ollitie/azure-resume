@@ -27,7 +27,7 @@ namespace Company.Function
 
             if (counter == null)
             {
-                // If item with ID 1 doesn't exist, create it with count 1
+                // If item with ID 1 doesn't exist, then create it with count 1.
                 counter = new Counter
                 {
                     Id = "1",
