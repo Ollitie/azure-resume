@@ -1,4 +1,4 @@
-// The following will create an Azure Function app on a consumption plan, along with a storage account.
+// The following will create an Azure Function app on a consumption plan, along with the resources needed for Function app.
 
 param location string
 param functionRuntime string = 'dotnet'

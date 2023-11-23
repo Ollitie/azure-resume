@@ -1,4 +1,4 @@
-// parameters file for input of a couple of parameters
+// parameters file to input of a couple of parameters
 
 using 'main.bicep'
 
