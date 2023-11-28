@@ -33,6 +33,7 @@ jobs:
         subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
         resourceGroupName: ${{ AZURE_RESOURCE_GROUP }}
         template: ./infrastructure/main.bicep
+        parameters: ./infrastructure/parameters.bicepparam
         failOnStdErr: false
 
   # Azure logout

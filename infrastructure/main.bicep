@@ -43,7 +43,7 @@ module keyvault 'keyvault.bicep' = {
 module cosmos 'cosmosdb.bicep' = {
   name: 'cosmos-deployment'
   params:{
-    cosmosAccountId: 'cosmos-${appName}-${appSuffix}'
+    cosmosAccountName: 'cosmos-${appName}-${appSuffix}'
     location: location
     keyVaultName: keyvault.outputs.keyVaultName
   }

@@ -1,13 +1,13 @@
 // The following will create a cosmos db account with serverless plan, as well as a database and a container that match with app backend code
 
 @maxLength(30)
-param cosmosAccountId string
+param cosmosAccountName string
 param location string
 param keyVaultName string
 
 
 resource cosmosAccount 'Microsoft.DocumentDB/databaseAccounts@2023-09-15' = {
-  name: toLower(cosmosAccountId)
+  name: toLower(cosmosAccountName)
   location: location
   kind: 'GlobalDocumentDB'
   properties: {
@@ -70,4 +70,4 @@ module setCosmosConnectionString 'setsecret.bicep' = {
   }
 }
 
-output cosmosAccountId string = cosmosAccountId
+output cosmosAccountName string = cosmosAccountName
