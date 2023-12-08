@@ -3,6 +3,8 @@ My implementation of Cloud resume challenge, in Azure. The goal was to build a s
 
 My main goals were to get hands-on experience with various Azure resources, their configuration, deploying those resources with IaC, learn Bicep, and get experience in building a CI/CD pipeline. Since this was originally more of a developer focused project and that is not my strongest suite at the moment, A Cloud Guru tutorial helped a lot with the functions api coding.
 
+Architecture diagram:
+(![Alt text](cloud-resume.png))
 
 # Components
 Frontend:
